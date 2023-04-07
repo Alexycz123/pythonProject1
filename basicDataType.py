@@ -54,11 +54,57 @@ def reverseWork(input):
 print(reverseWork("I like"))
 
 print("--------------元组-------------")
+
 tuple = ('abcd', 876, 2.23, 'runoob', 70.2)
-tiny_tuple = (123 , 'runoob')
+tiny_tuple = (123, 'runoob')
 print(tuple)
 print(tuple[0])
 print(tuple[1:3])
 print(tuple[2:])
-print(tiny_tuple*2)
+print(tiny_tuple * 2)
 print(tuple + tiny_tuple)
+
+print("--------------set集合-------------")
+
+sites = {'abc', 'abc', 'ycz', 'ycz'}
+print(sites)
+
+if 'ycz' in sites:
+    print(True)
+elif 'abcd' in sites:
+    print(True)
+else:
+    print(False)
+
+a = set('abracadabra')
+b = set('alacazam')
+print(a)
+print(b)
+
+print(a - b)  # a 和 b 的差集
+print(a | b)  # a 和 b 的并集
+print(a & b)  # a 和 b 的交集
+print(a ^ b)  # a 和 b 中不同时存在的元素
+
+print("--------------Dictionary（字典）-------------")
+
+dict = {}
+dict['one'] = 'abc123'
+dict[2] = "ycz123"
+
+dict2 = {'a': 1, 'b': 2}
+
+print(dict['one'])
+print(dict[2])
+print(dict2['a'])
+print(dict2['b'])
+
+print("--------------bytes 类型-------------")
+x = bytes("hello", encoding="utf-8")
+print(x)
+x = b"hello"
+y = x[1:3]
+z = x + b"world"
+print(x)
+print(y)
+print(z)
